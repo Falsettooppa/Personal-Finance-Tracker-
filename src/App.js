@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
-import SummaryChart from "./components/SummaryChart"; 
+import SummaryChart from "./components/SummaryChart";
+import ExportCSV from "./components/ExportCSV"; 
 
 function App() {
   const [transactions, setTransactions] = useState(() => {
@@ -62,6 +63,9 @@ function App() {
 
       {/* Chart */}
       <SummaryChart transactions={filteredTransactions} />
+
+      {/* CSV Export */}
+      <ExportCSV transactions={filteredTransactions} />
 
       {/* Transaction List */}
       <section>
