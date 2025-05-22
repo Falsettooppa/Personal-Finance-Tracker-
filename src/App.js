@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
+import SummaryChart from "./components/SummaryChart"; 
 
 function App() {
   const [transactions, setTransactions] = useState(() => {
-   
     const saved = localStorage.getItem("transactions");
     return saved ? JSON.parse(saved) : [];
   });
@@ -13,7 +13,6 @@ function App() {
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [sortBy, setSortBy] = useState("date");
 
- 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
   }, [transactions]);
@@ -60,6 +59,9 @@ function App() {
           <option value="amount">Sort by Amount</option>
         </select>
       </div>
+
+      {/* Chart */}
+      <SummaryChart transactions={filteredTransactions} />
 
       {/* Transaction List */}
       <section>
