@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Personal-Finance-Tracker-
+Here is my Pre-Qualification Test for Web3Bridge Lagos, Nigeria
+# Personal Finance Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application to help users track their personal income and expenses with categorization, filtering, sorting, and data persistence using localStorage. Includes a chart summary for visual insights.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Record income and expenses with amount, date, category, and optional notes.  
+- Create and filter transactions by type (income/expense) and category.  
+- Sort transactions by date or amount.  
+- Visual summary chart comparing income vs. expenses.  
+- Data persists across browser sessions using localStorage.  
+- Responsive design for different device sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Installation
 
-### `npm test`
+1. **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Falsettooppa/Personal-Finance-Tracker-.git
+cd personal-finance-tracker
+Install dependencies:
 
-### `npm run build`
+bash
+Copy
+Edit
+npm install
+Run the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy
+Edit
+npm start
+The app will be available at http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Usage
+Use the form to add new income or expense transactions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use the dropdown filters to view specific transaction types or categories.
 
-### `npm run eject`
+Sort transactions by date or amount.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Click Show Transactions button to toggle transaction list visibility.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Your data is saved automatically in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Testing
+Basic component tests are included using React Testing Library and Jest. To run tests:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy
+Edit
+npm test
+Deployment
+This app can be deployed on platforms like Vercel or GitHub Pages.
 
-## Learn More
+Technologies Used
+React.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+JavaScript (ES6+)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+localStorage for data persistence
 
-### Code Splitting
+Chart.js (via react-chartjs-2) for data visualization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is open source and available under the MIT License.
