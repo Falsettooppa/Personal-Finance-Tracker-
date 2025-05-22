@@ -1,0 +1,29 @@
+.transaction-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transaction-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.transaction-type-income {
+  color: green;
+  font-weight: bold;
+}
+
+.transaction-type-expense {
+  color: red;
+  font-weight: bold;
+}
+.transaction-list li:last-child {
+  border-bottom: none;
+}
