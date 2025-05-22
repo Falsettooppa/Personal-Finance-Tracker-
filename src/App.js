@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
 import SummaryChart from "./components/SummaryChart";
-import ExportCSV from "./components/ExportCSV"; 
+import ExportCSV from "./components/ExportCSV";
 
 function App() {
   const [transactions, setTransactions] = useState(() => {
@@ -13,6 +13,7 @@ function App() {
   const [typeFilter, setTypeFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [sortBy, setSortBy] = useState("date");
+  const [showTransactions, setShowTransactions] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
@@ -67,11 +68,20 @@ function App() {
       {/* CSV Export */}
       <ExportCSV transactions={filteredTransactions} />
 
-      {/* Transaction List */}
-      <section>
-        <h2 style={{ textAlign: "center", marginTop: "20px" }}>Transactions</h2>
-        <TransactionList transactions={filteredTransactions} />
-      </section>
+      {/* Toggle Transaction List Button */}
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <button onClick={() => setShowTransactions(!showTransactions)}>
+          {showTransactions ? "Hide Transactions" : "Show Transactions"}
+        </button>
+      </div>
+
+      {/* Conditionally render transaction list */}
+      {showTransactions && (
+        <section>
+          <h2 style={{ textAlign: "center", marginTop: "20px" }}>Transactions</h2>
+          <TransactionList transactions={filteredTransactions} />
+        </section>
+      )}
     </div>
   );
 }
