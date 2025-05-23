@@ -62,11 +62,24 @@ function App() {
         </select>
       </div>
 
-      {/* Chart */}
-      <SummaryChart transactions={filteredTransactions} />
-
-      {/* CSV Export */}
-      <ExportCSV transactions={filteredTransactions} />
+      {/* Chart and Export CSV side by side */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginTop: "30px",
+          gap: "20px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={{ flex: "1 1 300px", minWidth: "280px" }}>
+          <SummaryChart transactions={filteredTransactions} />
+        </div>
+        <div style={{ flexShrink: 0 }}>
+          <ExportCSV transactions={filteredTransactions} />
+        </div>
+      </div>
 
       {/* Toggle Transaction List Button */}
       <div style={{ textAlign: "center", marginTop: "20px" }}>
