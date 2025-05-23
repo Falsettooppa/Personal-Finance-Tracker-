@@ -18,11 +18,16 @@ function ExportCSV({ transactions }) {
         filename={"personal-finance-transactions.csv"}
         className="btn"
         style={{
-          padding: "8px 12px",
+          padding: "10px 16px",
           backgroundColor: "#007bff",
           color: "#fff",
           textDecoration: "none",
           borderRadius: "5px",
+          display: "inline-block",
+          minWidth: "140px",
+          textAlign: "center",
+          fontWeight: "600",
+          cursor: "pointer",
         }}
       >
         Export CSV
