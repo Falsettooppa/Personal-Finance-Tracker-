@@ -39,7 +39,7 @@ function App() {
 
       <TransactionForm onAddTransaction={addTransaction} />
 
-      {/* Filters */}
+      
       <div style={{ display: "flex", gap: "10px", marginTop: "20px", flexWrap: "wrap" }}>
         <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
           <option value="all">All Types</option>
@@ -62,7 +62,7 @@ function App() {
         </select>
       </div>
 
-      {/* Chart and Export CSV side by side */}
+     
       <div
         style={{
           display: "flex",
@@ -81,14 +81,14 @@ function App() {
         </div>
       </div>
 
-      {/* Toggle Transaction List Button */}
+      
       <div style={{ textAlign: "center", marginTop: "20px" }}>
         <button onClick={() => setShowTransactions(!showTransactions)}>
           {showTransactions ? "Hide Transactions" : "Show Transactions"}
         </button>
       </div>
 
-      {/* Conditionally render transaction list */}
+      
       {showTransactions && (
         <section>
           <h2 style={{ textAlign: "center", marginTop: "20px" }}>Transactions</h2>
