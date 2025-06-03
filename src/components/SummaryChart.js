@@ -11,7 +11,7 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-function SummaryChart({ transactions }) {
+function SummaryChart({ transactions, maxHeight = 300 }) {
   const incomeTotal = transactions
     .filter((t) => t.type === "income")
     .reduce((sum, t) => sum + t.amount, 0);
@@ -24,7 +24,7 @@ function SummaryChart({ transactions }) {
     labels: ["Income", "Expenses"],
     datasets: [
       {
-        label: "Amount ($)",
+        label: "Amount (₦)",
         data: [incomeTotal, expenseTotal],
         backgroundColor: ["#4caf50", "#f44336"],
         borderRadius: 6,
@@ -34,20 +34,36 @@ function SummaryChart({ transactions }) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) =>
+            `₦${context.parsed.y.toLocaleString()}`,
+        },
       },
     },
     scales: {
       y: {
         beginAtZero: true,
+        ticks: {
+          callback: (value) => `₦${value.toLocaleString()}`,
+        },
       },
     },
   };
 
   return (
-    <div style={{ marginTop: "30px" }}>
+    <div
+      style={{
+        marginTop: "30px",
+        height: maxHeight,
+        position: "relative",
+      }}
+    >
       <h3 style={{ textAlign: "center", marginBottom: "10px" }}>
         Income vs Expense Summary
       </h3>
