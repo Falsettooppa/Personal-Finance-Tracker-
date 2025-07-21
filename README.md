@@ -1,72 +1,27 @@
-# Personal-Finance-Tracker-
-Here is my Pre-Qualification Test for Web3Bridge Lagos, Nigeria
-# Personal Finance Tracker
+Personal Finance Tracker
+A simple and clean React app for tracking income and expenses. It helps you manage your money by recording transactions, showing summaries, and displaying charts.
 
-A simple React application to help users track their personal income and expenses with categorization, filtering, sorting, and data persistence using localStorage. Includes a chart summary for visual insights.
+Features
+Add income and expense transactions
 
----
+View total income, expenses, and balance
 
-## Features
+Chart showing income vs expense
 
-- Record income and expenses with amount, date, category, and optional notes.  
-- Create and filter transactions by type (income/expense) and category.  
-- Sort transactions by date or amount.  
-- Visual summary chart comparing income vs. expenses.  
-- Data persists across browser sessions using localStorage.  
-- Responsive design for different device sizes.
+Recent transactions table
 
----
+Show/hide full transaction list
 
-## Setup and Installation
+Search bar to find transactions
 
-1. **Clone the repository:**
+Multiple pages (Dashboard, Transactions, Settings)
 
-```bash
-git clone https://github.com/Falsettooppa/Personal-Finance-Tracker-.git
-cd personal-finance-tracker
-Install dependencies:
-
-bash
-Copy
-Edit
-npm install
-Run the development server:
-
-bash
-Copy
-Edit
-npm start
-The app will be available at http://localhost:3000.
-
-Usage
-Use the form to add new income or expense transactions.
-
-Use the dropdown filters to view specific transaction types or categories.
-
-Sort transactions by date or amount.
-
-Click Show Transactions button to toggle transaction list visibility.
-
-Your data is saved automatically in your browser.
-
-Testing
-Basic component tests are included using React Testing Library and Jest. To run tests:
-
-bash
-Copy
-Edit
-npm test
-Deployment
-This app can be deployed on platforms like Vercel or GitHub Pages.
-
-Technologies Used
+🛠 Tech Used
 React.js
 
-JavaScript (ES6+)
+Chart.js
 
-localStorage for data persistence
+JavaScript (ES6)
 
-Chart.js (via react-chartjs-2) for data visualization
+CSS
 
-License
-This project is open source and available under the MIT License.
